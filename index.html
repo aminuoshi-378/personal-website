@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xmz | 安全研究员 · Java后端工程师</title>
+    <meta name="description" content="xmz 的简历作品集：安全研究员 / CTF 从业者 / Java 后端工程师，专注 Java·SpringBoot 与 AI/LLM 集成、安全漏洞挖掘。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+        .scroll-animation.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#home" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">X</span>
+                    </div>
+                    <span class="font-bold text-xl text-gray-900">xmz.dev</span>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">首页</a>
+                    <a href="#about" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">关于</a>
+                    <a href="#projects" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">作品集</a>
+                    <a href="#skills" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">技能</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">联系</a>
+                </nav>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="https://github.com/aminuoshi-378" target="_blank" class="text-gray-600 hover:text-gray-900 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="mailto:2403907102@qq.com" class="text-gray-600 hover:text-red-500 transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-primary-50 pt-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="mb-8">
+                <div class="w-32 h-32 mx-auto bg-primary-100 rounded-full flex items-center justify-center">
+                    <span class="text-primary-600 font-bold text-4xl">X</span>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">xmz</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8">安全研究员 | CTF 从业者 | Java 后端工程师</p>
+            <p class="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
+                专注 Java·SpringBoot 后端开发与 AI/LLM 集成，深耕 Web 安全与漏洞挖掘，掌握 OWASP Top 10，正冲刺 Java 后端求职 / SRC 漏洞挖掘。
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#projects" class="px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors">查看作品集</a>
+                <a href="#contact" class="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition-colors">联系我</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">关于我</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-gray-600 mb-6">我是 xmz，一名以安全视角驱动开发的后端工程师。技术栈覆盖 Python / C / C++ / Go / Java，主力方向是 Java·SpringBoot 后端与 AI/LLM 集成，同时具备 Web 安全（OWASP Top 10）与 CTF 实战经验。</p>
+                    <p class="text-lg text-gray-600 mb-6">从 LLVM 编译期防护（LeafHooks CFI）到漏洞自动化挖掘（loudong）、再到多 Agent 平台与横向评测（SmartFlow / Harbor），我相信"安全地构建"与"构建安全"同样重要。</p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary-600">5+</div>
+                            <div class="text-gray-600">核心编程语言</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary-600">4</div>
+                            <div class="text-gray-600">核心开源项目</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center mb-2">
+                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707M6.05 19.95l.708-.707M20 3l-9 9m4.95 4.95l.707-.707M12 3a9 9 0 100 18 9 9 0 000-18z"></path></svg>
+                        </div>
+                        <h3 class="font-semibold">安全研究</h3>
+                        <p class="text-sm text-gray-600">OWASP Top 10 · CTF · 漏洞挖掘</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center mb-2">
+                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <h3 class="font-semibold">Java 后端</h3>
+                        <p class="text-sm text-gray-600">SpringBoot · AI/LLM 集成</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">作品集</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-green-600 font-semibold">Harbor</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Harbor</h3>
+                    <p class="text-gray-600 mb-4">多智能体评测与优化框架，面向 Agent 的能力评估与持续改进。</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">AI</span>
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Agent</span>
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">评测</span>
+                    </div>
+                    <a href="https://github.com/aminuoshi-378/harbor" target="_blank" class="text-primary-600 hover:text-primary-700 text-sm font-medium">查看项目 →</a>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="aspect-video bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-purple-600 font-semibold">DeepSeek Harness</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">DeepSeek Harness</h3>
+                    <p class="text-gray-600 mb-4">Everything is a Plugin —— 面向 AI Agent 的插件化开发框架，各类能力以插件形式接入。</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">AI</span>
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Plugin</span>
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">DeepSeek</span>
+                    </div>
+                    <a href="https://github.com/aminuoshi-378/deepseek-harness" target="_blank" class="text-primary-600 hover:text-primary-700 text-sm font-medium">查看项目 →</a>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-blue-600 font-semibold">Jeandle JDK</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Jeandle JDK</h3>
+                    <p class="text-gray-600 mb-4">基于 OpenJDK 与 LLVM 的 Java JIT 编译器，借助 LLVM 生成机器码，追求高性能编译优化。</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Java</span>
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">OpenJDK</span>
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">LLVM</span>
+                    </div>
+                    <a href="https://github.com/aminuoshi-378/jeandle-jdk" target="_blank" class="text-primary-600 hover:text-primary-700 text-sm font-medium">查看项目 →</a>
+                </div>
+                <!-- Project 4 -->
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="aspect-video bg-gradient-to-br from-red-100 to-red-200 rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-red-600 font-semibold">AReno</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">AReno</h3>
+                    <p class="text-gray-600 mb-6">单节点易用且高效的强化学习（RL）后训练工具库，助力大模型性能提升。</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">AI</span>
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">RL</span>
+                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">大模型</span>
+                    </div>
+                    <a href="https://github.com/aminuoshi-378/AReno" target="_blank" class="text-primary-600 hover:text-primary-700 text-sm font-medium">查看项目 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">技能</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-4">后端开发</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Java / SpringBoot</span><span class="text-sm text-gray-500">主力</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-primary-600 h-2 rounded-full" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Python</span><span class="text-sm text-gray-500">熟练</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-primary-600 h-2 rounded-full" style="width: 80%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Go</span><span class="text-sm text-gray-500">掌握</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-primary-600 h-2 rounded-full" style="width: 65%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-4">系统/底层</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>C / C++</span><span class="text-sm text-gray-500">熟练</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-green-500 h-2 rounded-full" style="width: 78%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>LLVM / 编译器</span><span class="text-sm text-gray-500">掌握</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-green-500 h-2 rounded-full" style="width: 70%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>CS 408 基础</span><span class="text-sm text-gray-500">扎实</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-green-500 h-2 rounded-full" style="width: 82%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-4">安全</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Web 安全</span><span class="text-sm text-gray-500">OWASP</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>CTF / 渗透</span><span class="text-sm text-gray-500">实战</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-purple-500 h-2 rounded-full" style="width: 75%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>漏洞挖掘</span><span class="text-sm text-gray-500">进行中</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-purple-500 h-2 rounded-full" style="width: 68%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-semibold text-lg mb-4">AI / 数据</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1"><span>LLM 集成</span><span class="text-sm text-gray-500">熟练</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-orange-500 h-2 rounded-full" style="width: 80%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>Multi-Agent</span><span class="text-sm text-gray-500">掌握</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-orange-500 h-2 rounded-full" style="width: 72%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1"><span>机器学习聚类</span><span class="text-sm text-gray-500">实践</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-orange-500 h-2 rounded-full" style="width: 60%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">联系我</h2>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">让我们聊聊</h3>
+                    <p class="text-gray-600 mb-8">对安全研究、Java 后端或 AI/LLM 集成感兴趣？欢迎交流合作与内推。</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">GitHub</h4>
+                                <p class="text-gray-600">github.com/aminuoshi-378</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">位置</h4>
+                                <p class="text-gray-600">中国</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('我的邮箱：2403907102@qq.com');">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">姓名</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="您的姓名">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">邮箱</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">消息</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none" placeholder="您想说什么？"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors">发送消息</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">X</span>
+                    </div>
+                    <span class="font-bold text-xl">xmz.dev</span>
+                </div>
+                <p class="text-gray-400 text-sm">© 2026 xmz.dev 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all duration-300 hidden z-50">
+        <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <script>
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.remove('hidden');
+            } else {
+                scrollToTopBtn.classList.add('hidden');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.scroll-animation').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
