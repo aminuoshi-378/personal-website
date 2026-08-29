@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xmz | Agent 测评研究员</title>
-    <meta name="description" content="xmz 的简历作品集：Agent 测评研究员 / Java 后端工程师，专注 Agent 能力测评、多智能体横向评测与 Java·SpringBoot 后端。">
+    <title>个人作品集 | Agent 测评研究员</title>
+    <meta name="description" content="个人简历作品集：Agent 测评研究员 / Java 后端工程师，专注 Agent 能力测评、多智能体横向评测与 Java·SpringBoot 后端。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -46,31 +46,61 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9 0%, #8b5cf6 50%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .skill-bar {
+            transition: width 1s ease-in-out;
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <a href="#home" class="flex items-center space-x-2">
-                    <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">X</span>
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-9 h-9 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <span class="text-white font-bold text-lg">D</span>
                     </div>
-                    <span class="font-bold text-xl text-gray-900">xmz.dev</span>
+                    <span class="font-bold text-xl text-gray-900 group-hover:text-primary-600 transition-colors">DevPortfolio</span>
                 </a>
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">首页</a>
-                    <a href="#about" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">关于</a>
-                    <a href="#projects" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">作品集</a>
-                    <a href="#skills" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">技能</a>
-                    <a href="#contact" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">联系</a>
+                <nav class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="px-4 py-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg font-medium transition-all">首页</a>
+                    <a href="#about" class="px-4 py-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg font-medium transition-all">关于</a>
+                    <a href="#projects" class="px-4 py-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg font-medium transition-all">作品集</a>
+                    <a href="#skills" class="px-4 py-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg font-medium transition-all">技能</a>
+                    <a href="#contact" class="px-4 py-2 text-gray-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg font-medium transition-all">联系</a>
                 </nav>
-                <div class="hidden md:flex items-center space-x-4">
-                    <a href="https://github.com/aminuoshi-378" target="_blank" class="text-gray-600 hover:text-gray-900 transition-colors">
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="https://github.com/aminuoshi-378" target="_blank" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-all">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     </a>
-                    <a href="mailto:2403907102@qq.com" class="text-gray-600 hover:text-red-500 transition-colors">
+                    <a href="mailto:2403907102@qq.com" class="p-2 text-gray-600 hover:text-red-500 hover:bg-red-50 rounded-lg transition-all">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     </a>
                 </div>
@@ -79,59 +109,83 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-primary-50 pt-16">
-        <div class="max-w-4xl mx-auto px-4 text-center">
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-primary-50 to-cyan-50 pt-16 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 floating"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 floating" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
             <div class="mb-8">
-                <div class="w-32 h-32 mx-auto bg-primary-100 rounded-full flex items-center justify-center">
-                    <span class="text-primary-600 font-bold text-4xl">X</span>
+                <div class="w-36 h-36 mx-auto bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center shadow-2xl floating">
+                    <span class="text-white font-bold text-5xl">D</span>
                 </div>
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4">xmz</h1>
-            <p class="text-xl md:text-2xl text-gray-600 mb-8">Agent 测评研究员 | Java 后端工程师</p>
-            <p class="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                <span class="gradient-text">开发者</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-6 font-medium">Agent 测评研究员 | Java 后端工程师</p>
+            <p class="text-lg text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed">
                 专注 Agent 能力测评与多智能体横向评测（Harbor / SmartFlow），配合 Java·SpringBoot 后端与 AI/LLM 集成，以数据驱动智能体持续改进。
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#projects" class="px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors">查看作品集</a>
-                <a href="#contact" class="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg font-medium hover:bg-gray-300 transition-colors">联系我</a>
+                <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-semibold hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">查看作品集</a>
+                <a href="#contact" class="px-8 py-4 bg-white text-gray-800 rounded-xl font-semibold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 border border-gray-200">联系我</a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
+    <section id="about" class="py-24 bg-white">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">关于我</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+                <span class="gradient-text">关于我</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <p class="text-lg text-gray-600 mb-6">我是 xmz，一名主攻 Agent 测评的研究员，专注智能体能力测试、横向评测与持续改进。技术栈覆盖 Python / C / C++ / Go / Java，主力方向是 Java·SpringBoot 后端、AI/LLM 集成与多智能体平台构建。</p>
-                    <p class="text-lg text-gray-600 mb-6">从多 Agent 平台（SmartFlow）到横向评测框架（Harbor），我围绕 Agent 的评估、测试与优化持续推进，追求以可量化的方式改进智能体。</p>
-                    <p class="text-lg text-gray-600 mb-6">作为 Agent 测试员，我通过系统化测试定位智能体短板，并以数据驱动的方式推动其能力演化。</p>
-                    <div class="grid grid-cols-2 gap-4 mt-8">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-primary-600">5+</div>
-                            <div class="text-gray-600">核心编程语言</div>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">我是一名主攻 Agent 测评的研究员，专注智能体能力测试、横向评测与持续改进。技术栈覆盖 Python / C / C++ / Go / Java，主力方向是 Java·SpringBoot 后端、AI/LLM 集成与多智能体平台构建。</p>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">从多 Agent 平台（SmartFlow）到横向评测框架（Harbor），我围绕 Agent 的评估、测试与优化持续推进，追求以可量化的方式改进智能体。</p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">作为 Agent 测试员，我通过系统化测试定位智能体短板，并以数据驱动的方式推动其能力演化。</p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-6 bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl">
+                            <div class="text-4xl font-bold text-primary-600 mb-2">5+</div>
+                            <div class="text-gray-700 font-medium">核心编程语言</div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-primary-600">5</div>
-                            <div class="text-gray-600">核心开源项目</div>
+                        <div class="text-center p-6 bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-2xl">
+                            <div class="text-4xl font-bold text-cyan-600 mb-2">5</div>
+                            <div class="text-gray-700 font-medium">核心开源项目</div>
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center mb-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707M6.05 19.95l.708-.707M20 3l-9 9m4.95 4.95l.707-.707M12 3a9 9 0 100 18 9 9 0 000-18z"></path></svg>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-2xl card-hover">
+                        <div class="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707M6.05 19.95l.708-.707M20 3l-9 9m4.95 4.95l.707-.707M12 3a9 9 0 100 18 9 9 0 000-18z"></path></svg>
                         </div>
-                        <h3 class="font-semibold">Agent 测评</h3>
-                        <p class="text-sm text-gray-600">多智能体横测 · 评测 · 调优</p>
+                        <h3 class="font-semibold text-lg mb-2">Agent 测评</h3>
+                        <p class="text-gray-600">多智能体横测 · 评测 · 调优</p>
                     </div>
-                    <div class="bg-gray-50 p-4 rounded-lg">
-                        <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center mb-2">
-                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-2xl card-hover">
+                        <div class="w-12 h-12 bg-cyan-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                         </div>
-                        <h3 class="font-semibold">Java 后端</h3>
-                        <p class="text-sm text-gray-600">SpringBoot · AI/LLM 集成</p>
+                        <h3 class="font-semibold text-lg mb-2">Java 后端</h3>
+                        <p class="text-gray-600">SpringBoot · AI/LLM 集成</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-2xl card-hover">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">全栈开发</h3>
+                        <p class="text-gray-600">前端 · 后端 · 部署</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-2xl card-hover">
+                        <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">快速学习</h3>
+                        <p class="text-gray-600">新技术 · 新框架</p>
                     </div>
                 </div>
             </div>
@@ -139,158 +193,177 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50">
+    <section id="projects" class="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">作品集</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+                <span class="gradient-text">作品集</span>
+            </h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-green-600 font-semibold">Harbor</span>
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="aspect-video bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-green-600 font-bold text-xl">Harbor</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Harbor <span class="ml-1 align-middle px-2 py-0.5 bg-amber-100 text-amber-700 text-xs rounded-full">Fork</span></h3>
-                    <p class="text-gray-600 mb-4">多智能体评测与优化框架，面向 Agent 的能力评估与持续改进。</p>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">AI</span>
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Agent</span>
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">评测</span>
+                    <h3 class="text-xl font-bold mb-3">Harbor <span class="ml-2 inline-block px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-medium">Fork</span></h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">多智能体评测与优化框架，面向 Agent 的能力评估与持续改进。</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-medium">AI</span>
+                        <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-medium">Agent</span>
+                        <span class="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-medium">评测</span>
                     </div>
-                    <p class="text-xs text-gray-400 mb-2">Fork 自 <a href="https://github.com/harbor-framework/harbor" target="_blank" class="text-primary-600">harbor-framework/harbor</a></p>
-                    <a href="https://github.com/aminuoshi-378/harbor" target="_blank" class="text-primary-600 hover:text-primary-700 text-sm font-medium">查看项目 →</a>
+                    <p class="text-xs text-gray-500 mb-4">Fork 自 <a href="https://github.com/harbor-framework/harbor" target="_blank" class="text-primary-600 hover:underline">harbor-framework/harbor</a></p>
+                    <a href="https://github.com/aminuoshi-378/harbor" target="_blank" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group">
+                        查看项目 
+                        <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
                 </div>
                 <!-- Project 2 -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <div class="aspect-video bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-purple-600 font-semibold">DeepSeek Harness</span>
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="aspect-video bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-purple-600 font-bold text-xl">DeepSeek Harness</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">DeepSeek Harness <span class="ml-1 align-middle px-2 py-0.5 bg-amber-100 text-amber-700 text-xs rounded-full">Fork</span></h3>
-                    <p class="text-gray-600 mb-4">Everything is a Plugin —— 面向 AI Agent 的插件化开发框架，各类能力以插件形式接入。</p>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">AI</span>
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Plugin</span>
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">DeepSeek</span>
+                    <h3 class="text-xl font-bold mb-3">DeepSeek Harness <span class="ml-2 inline-block px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-medium">Fork</span></h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Everything is a Plugin —— 面向 AI Agent 的插件化开发框架，各类能力以插件形式接入。</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">AI</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Plugin</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">DeepSeek</span>
                     </div>
-                    <p class="text-xs text-gray-400 mb-2">Fork 自 <a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank" class="text-primary-600">deepseek-ai/deepseek-harness</a></p>
-                    <a href="https://github.com/aminuoshi-378/deepseek-harness" target="_blank" class="text-primary-600 hover:text-primary-700 text-sm font-medium">查看项目 →</a>
+                    <p class="text-xs text-gray-500 mb-4">Fork 自 <a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank" class="text-primary-600 hover:underline">deepseek-ai/deepseek-harness</a></p>
+                    <a href="https://github.com/aminuoshi-378/deepseek-harness" target="_blank" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group">
+                        查看项目 
+                        <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
                 </div>
                 <!-- Project 3 -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <div class="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-blue-600 font-semibold">Jeandle JDK</span>
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-blue-600 font-bold text-xl">Jeandle JDK</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Jeandle JDK <span class="ml-1 align-middle px-2 py-0.5 bg-amber-100 text-amber-700 text-xs rounded-full">Fork</span></h3>
-                    <p class="text-gray-600 mb-4">基于 OpenJDK 与 LLVM 的 Java JIT 编译器，借助 LLVM 生成机器码，追求高性能编译优化。</p>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Java</span>
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">OpenJDK</span>
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">LLVM</span>
+                    <h3 class="text-xl font-bold mb-3">Jeandle JDK <span class="ml-2 inline-block px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-medium">Fork</span></h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">基于 OpenJDK 与 LLVM 的 Java JIT 编译器，借助 LLVM 生成机器码，追求高性能编译优化。</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Java</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">OpenJDK</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">LLVM</span>
                     </div>
-                    <p class="text-xs text-gray-400 mb-2">Fork 自 <a href="https://github.com/jeandle/jeandle-jdk" target="_blank" class="text-primary-600">jeandle/jeandle-jdk</a></p>
-                    <a href="https://github.com/aminuoshi-378/jeandle-jdk" target="_blank" class="text-primary-600 hover:text-primary-700 text-sm font-medium">查看项目 →</a>
+                    <p class="text-xs text-gray-500 mb-4">Fork 自 <a href="https://github.com/jeandle/jeandle-jdk" target="_blank" class="text-primary-600 hover:underline">jeandle/jeandle-jdk</a></p>
+                    <a href="https://github.com/aminuoshi-378/jeandle-jdk" target="_blank" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group">
+                        查看项目 
+                        <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
                 </div>
                 <!-- Project 4 -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <div class="aspect-video bg-gradient-to-br from-red-100 to-red-200 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-red-600 font-semibold">AReno</span>
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="aspect-video bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-red-600 font-bold text-xl">AReno</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">AReno <span class="ml-1 align-middle px-2 py-0.5 bg-amber-100 text-amber-700 text-xs rounded-full">Fork</span></h3>
-                    <p class="text-gray-600 mb-6">单节点易用且高效的强化学习（RL）后训练工具库，助力大模型性能提升。</p>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">AI</span>
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">RL</span>
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">大模型</span>
+                    <h3 class="text-xl font-bold mb-3">AReno <span class="ml-2 inline-block px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-medium">Fork</span></h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">单节点易用且高效的强化学习（RL）后训练工具库，助力大模型性能提升。</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium">AI</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium">RL</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium">大模型</span>
                     </div>
-                    <p class="text-xs text-gray-400 mb-2">Fork 自 <a href="https://github.com/inclusionAI/AReno" target="_blank" class="text-primary-600">inclusionAI/AReno</a></p>
-                    <a href="https://github.com/aminuoshi-378/AReno" target="_blank" class="text-primary-600 hover:text-primary-700 text-sm font-medium">查看项目 →</a>
+                    <p class="text-xs text-gray-500 mb-4">Fork 自 <a href="https://github.com/inclusionAI/AReno" target="_blank" class="text-primary-600 hover:underline">inclusionAI/AReno</a></p>
+                    <a href="https://github.com/aminuoshi-378/AReno" target="_blank" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group">
+                        查看项目 
+                        <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
                 </div>
                 <!-- Project 5 -->
-                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
-                    <div class="aspect-video bg-gradient-to-br from-teal-100 to-teal-200 rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-teal-600 font-semibold">dsh-self-improving</span>
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="aspect-video bg-gradient-to-br from-teal-100 to-teal-200 rounded-xl flex items-center justify-center mb-6">
+                        <span class="text-teal-600 font-bold text-xl">dsh-self-improving</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">dsh-self-improving <span class="ml-1 align-middle px-2 py-0.5 bg-green-100 text-green-700 text-xs rounded-full">原创插件</span></h3>
-                    <p class="text-gray-600 mb-4">DeepSeek Harness 的跨会话自改进学习插件，让 Agent 在多次会话间持续学习与自我进化。</p>
+                    <h3 class="text-xl font-bold mb-3">dsh-self-improving <span class="ml-2 inline-block px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">原创插件</span></h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">DeepSeek Harness 的跨会话自改进学习插件，让 Agent 在多次会话间持续学习与自我进化。</p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">AI</span>
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Plugin</span>
-                        <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">自我改进</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-xs font-medium">AI</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-xs font-medium">Plugin</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-xs font-medium">自我改进</span>
                     </div>
-                    <a href="https://github.com/aminuoshi-378/dsh-self-improving" target="_blank" class="text-primary-600 hover:text-primary-700 text-sm font-medium">查看项目 →</a>
+                    <a href="https://github.com/aminuoshi-378/dsh-self-improving" target="_blank" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold group">
+                        查看项目 
+                        <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-white">
+    <section id="skills" class="py-24 bg-white">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">技能</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+                <span class="gradient-text">技能</span>
+            </h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-gray-50 p-6 rounded-xl">
-                    <h3 class="font-semibold text-lg mb-4">后端开发</h3>
-                    <div class="space-y-3">
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-2xl card-hover">
+                    <h3 class="font-bold text-lg mb-6 text-gray-900">后端开发</h3>
+                    <div class="space-y-4">
                         <div>
-                            <div class="flex justify-between mb-1"><span>Java / SpringBoot</span><span class="text-sm text-gray-500">主力</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-primary-600 h-2 rounded-full" style="width: 90%"></div></div>
+                            <div class="flex justify-between mb-2"><span class="font-medium text-gray-700">Java / SpringBoot</span><span class="text-sm text-primary-600 font-medium">主力</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-gradient-to-r from-primary-500 to-primary-600 h-2.5 rounded-full skill-bar" style="width: 90%"></div></div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-1"><span>Python</span><span class="text-sm text-gray-500">熟练</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-primary-600 h-2 rounded-full" style="width: 80%"></div></div>
+                            <div class="flex justify-between mb-2"><span class="font-medium text-gray-700">Python</span><span class="text-sm text-primary-600 font-medium">熟练</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-gradient-to-r from-primary-500 to-primary-600 h-2.5 rounded-full skill-bar" style="width: 80%"></div></div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-1"><span>Go</span><span class="text-sm text-gray-500">掌握</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-primary-600 h-2 rounded-full" style="width: 65%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-xl">
-                    <h3 class="font-semibold text-lg mb-4">系统/底层</h3>
-                    <div class="space-y-3">
-                        <div>
-                            <div class="flex justify-between mb-1"><span>C / C++</span><span class="text-sm text-gray-500">熟练</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-green-500 h-2 rounded-full" style="width: 78%"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1"><span>LLVM / 编译器</span><span class="text-sm text-gray-500">掌握</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-green-500 h-2 rounded-full" style="width: 70%"></div></div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1"><span>CS 408 基础</span><span class="text-sm text-gray-500">扎实</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-green-500 h-2 rounded-full" style="width: 82%"></div></div>
+                            <div class="flex justify-between mb-2"><span class="font-medium text-gray-700">Go</span><span class="text-sm text-primary-600 font-medium">掌握</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-gradient-to-r from-primary-500 to-primary-600 h-2.5 rounded-full skill-bar" style="width: 65%"></div></div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-xl">
-                    <h3 class="font-semibold text-lg mb-4">Agent 测评</h3>
-                    <div class="space-y-3">
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-2xl card-hover">
+                    <h3 class="font-bold text-lg mb-6 text-gray-900">系统/底层</h3>
+                    <div class="space-y-4">
                         <div>
-                            <div class="flex justify-between mb-1"><span>Agent 能力评测</span><span class="text-sm text-gray-500">核心</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-purple-500 h-2 rounded-full" style="width: 90%"></div></div>
+                            <div class="flex justify-between mb-2"><span class="font-medium text-gray-700">C / C++</span><span class="text-sm text-green-600 font-medium">熟练</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-gradient-to-r from-green-500 to-green-600 h-2.5 rounded-full skill-bar" style="width: 78%"></div></div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-1"><span>多智能体横向评测</span><span class="text-sm text-gray-500">Harbor</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div></div>
+                            <div class="flex justify-between mb-2"><span class="font-medium text-gray-700">LLVM / 编译器</span><span class="text-sm text-green-600 font-medium">掌握</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-gradient-to-r from-green-500 to-green-600 h-2.5 rounded-full skill-bar" style="width: 70%"></div></div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-1"><span>Agent 测试与调优</span><span class="text-sm text-gray-500">进行中</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-purple-500 h-2 rounded-full" style="width: 78%"></div></div>
+                            <div class="flex justify-between mb-2"><span class="font-medium text-gray-700">CS 408 基础</span><span class="text-sm text-green-600 font-medium">扎实</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-gradient-to-r from-green-500 to-green-600 h-2.5 rounded-full skill-bar" style="width: 82%"></div></div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-xl">
-                    <h3 class="font-semibold text-lg mb-4">AI / 数据</h3>
-                    <div class="space-y-3">
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-2xl card-hover">
+                    <h3 class="font-bold text-lg mb-6 text-gray-900">Agent 测评</h3>
+                    <div class="space-y-4">
                         <div>
-                            <div class="flex justify-between mb-1"><span>LLM 集成</span><span class="text-sm text-gray-500">熟练</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-orange-500 h-2 rounded-full" style="width: 80%"></div></div>
+                            <div class="flex justify-between mb-2"><span class="font-medium text-gray-700">Agent 能力评测</span><span class="text-sm text-purple-600 font-medium">核心</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-gradient-to-r from-purple-500 to-purple-600 h-2.5 rounded-full skill-bar" style="width: 90%"></div></div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-1"><span>Multi-Agent</span><span class="text-sm text-gray-500">掌握</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-orange-500 h-2 rounded-full" style="width: 72%"></div></div>
+                            <div class="flex justify-between mb-2"><span class="font-medium text-gray-700">多智能体横向评测</span><span class="text-sm text-purple-600 font-medium">Harbor</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-gradient-to-r from-purple-500 to-purple-600 h-2.5 rounded-full skill-bar" style="width: 85%"></div></div>
                         </div>
                         <div>
-                            <div class="flex justify-between mb-1"><span>机器学习聚类</span><span class="text-sm text-gray-500">实践</span></div>
-                            <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-orange-500 h-2 rounded-full" style="width: 60%"></div></div>
+                            <div class="flex justify-between mb-2"><span class="font-medium text-gray-700">Agent 测试与调优</span><span class="text-sm text-purple-600 font-medium">进行中</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-gradient-to-r from-purple-500 to-purple-600 h-2.5 rounded-full skill-bar" style="width: 78%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-2xl card-hover">
+                    <h3 class="font-bold text-lg mb-6 text-gray-900">AI / 数据</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2"><span class="font-medium text-gray-700">LLM 集成</span><span class="text-sm text-amber-600 font-medium">熟练</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-gradient-to-r from-amber-500 to-amber-600 h-2.5 rounded-full skill-bar" style="width: 80%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2"><span class="font-medium text-gray-700">Multi-Agent</span><span class="text-sm text-amber-600 font-medium">掌握</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-gradient-to-r from-amber-500 to-amber-600 h-2.5 rounded-full skill-bar" style="width: 72%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2"><span class="font-medium text-gray-700">机器学习聚类</span><span class="text-sm text-amber-600 font-medium">实践</span></div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-gradient-to-r from-amber-500 to-amber-600 h-2.5 rounded-full skill-bar" style="width: 60%"></div></div>
                         </div>
                     </div>
                 </div>
@@ -299,16 +372,29 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
+    <section id="contact" class="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">联系我</h2>
-            <div class="max-w-xl mx-auto text-center bg-white p-10 rounded-xl shadow-lg">
-                <h3 class="text-2xl font-semibold mb-4">欢迎交流</h3>
-                <p class="text-gray-600 mb-8">对 Agent 测评、Java 后端或 AI/LLM 集成感兴趣，欢迎邮件联系。</p>
-                <a href="mailto:2403907102@qq.com" class="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    2403907102@qq.com
-                </a>
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center">
+                <span class="gradient-text">联系我</span>
+            </h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-white p-12 rounded-3xl shadow-xl text-center relative overflow-hidden">
+                    <!-- Background decoration -->
+                    <div class="absolute -top-20 -right-20 w-40 h-40 bg-primary-100 rounded-full mix-blend-multiply filter blur-xl opacity-50"></div>
+                    <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-cyan-100 rounded-full mix-blend-multiply filter blur-xl opacity-50"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-900">欢迎交流</h3>
+                        <p class="text-gray-600 mb-8 leading-relaxed">对 Agent 测评、Java 后端或 AI/LLM 集成感兴趣，欢迎邮件联系。</p>
+                        <a href="mailto:2403907102@qq.com" class="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-semibold hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            2403907102@qq.com
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -317,20 +403,28 @@
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center justify-between">
-                <div class="flex items-center space-x-2 mb-4 md:mb-0">
-                    <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">X</span>
+                <div class="flex items-center space-x-3 mb-6 md:mb-0">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center shadow-lg">
+                        <span class="text-white font-bold text-lg">D</span>
                     </div>
-                    <span class="font-bold text-xl">xmz.dev</span>
+                    <span class="font-bold text-xl">DevPortfolio</span>
                 </div>
-                <p class="text-gray-400 text-sm">© 2026 xmz.dev 保留所有权利。</p>
+                <div class="flex items-center space-x-6 mb-6 md:mb-0">
+                    <a href="https://github.com/aminuoshi-378" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="mailto:2403907102@qq.com" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </a>
+                </div>
+                <p class="text-gray-500 text-sm">© 2026 DevPortfolio. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all duration-300 hidden z-50">
-        <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    <button id="scrollToTop" class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-primary-500 to-primary-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hidden z-50 transform hover:-translate-y-1 flex items-center justify-center">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
     </button>
 
     <script>
