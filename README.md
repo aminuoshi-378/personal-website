@@ -1,14 +1,14 @@
 # xmz.dev · 个人作品集
 
-安全研究员 / CTF 从业者 / Java 后端工程师（xmz）的个人作品集静态网站。
+Agent 测评研究员 / Java 后端工程师（xmz）的个人作品集静态网站。
 
 ## 内容
 
-- **关于**：技术定位（Java·SpringBoot 与 AI/LLM 集成、Web 安全 OWASP Top 10、CTF、Agent 测试员）
+- **关于**：技术定位（Agent 能力测评、多智能体横向评测、Java·SpringBoot 与 AI/LLM 集成、Agent 测试员）
 - **作品集**：
   - Harbor、DeepSeek Harness、Jeandle JDK、AReno —— Fork，卡片已标注上游仓库
   - dsh-self-improving —— 原创插件（DeepSeek Harness 跨会话自改进学习插件）
-- **技能** / **联系**
+- **技能** / **联系（邮箱）**
 
 ## 部署
 
